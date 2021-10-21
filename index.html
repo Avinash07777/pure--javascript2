@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+
+        </style>
+
+        <script>
+
+        </script>
+    </head>
+    <body>
+
+
+        <script>
+            // creating the header element
+            var h = document.createElement("header")
+            console.log(h)
+            //putting it into the body
+            document.body.appendChild(h)
+            var hdrclass = document.querySelector("header").setAttribute("class",'av_header');
+            h.innerHTML="HEADER"
+            // CREATING THE DIV ELEMENT
+            var d = document.createElement("div")
+            console.log(d)
+            // putting the div element into body
+            document.body.appendChild(d)
+            document.querySelector('div').innerHTML="MAIN AREA";
+            // giving attribute to the div element
+            d.setAttribute("class",'av_main')
+            d.style.color="red"
+            var f = document.createElement("footer")
+            console.log(f)
+            document.body.appendChild(f)
+            var ftr = document.querySelector("div ~ footer").innerHTML= "FOOTER"
+            console.log(ftr)
+            var f = document.querySelector("div ~ footer")
+            // Ccreationg the button element
+            var b = document.createElement("button");
+            console.log(b)
+            b.innerHTML="Click Me"
+            // now we puttiung the button in body
+            f.appendChild(b)
+            // getting the element by  "getElementsByTagName"  method
+            var btn = document.getElementsByTagName("button")
+            console.log(btn)
+            // functions without name are called anonymous function
+            btn[0].addEventListener('click', function (){
+                alert("I AM CLICKED BY YOU")
+                h.style.color="yellow"
+
+            });
+            
+
+
+
+        </script>
+    </body>
+</html>
